@@ -9,7 +9,7 @@ import io.reactivex.schedulers.Schedulers;
 
 public class RxHelper {
     /**
-     * 统一线程处理
+     * 统一线程处理   https://blog.csdn.net/wxd_beijing/article/details/70059615
      * <p>
      * 发布事件io线程，接收事件主线程
      */
