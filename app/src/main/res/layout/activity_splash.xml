@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/flower">
+
+    <LinearLayout
+        android:id="@+id/ll_skip"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_30"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/dp_35"
+        android:layout_marginRight="@dimen/dp_25"
+        android:background="@drawable/shape_count_down_bg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp_5"
+            android:text="跳过:"
+            android:textColor="@color/md_white"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/tv_count_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:textColor="@color/md_white"
+            android:textSize="@dimen/sp_16"
+            android:text="3"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
