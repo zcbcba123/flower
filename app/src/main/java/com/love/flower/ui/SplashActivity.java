@@ -53,11 +53,11 @@ public class SplashActivity extends BaseActivity {
     }
 
     @OnClick(R.id.ll_skip)
-    public void onClick(View v){
-        switch (v.getId()){
+    public void onClick(View v) {
+        switch (v.getId()) {
             case R.id.ll_skip:
-                mIsCancle=true;
-                startActivity(new Intent(SplashActivity.this,MainActivity.class));
+                mIsCancle = true;
+                startActivity(new Intent(SplashActivity.this, MainActivity.class));
                 finish();
                 break;
         }
@@ -92,7 +92,7 @@ public class SplashActivity extends BaseActivity {
 
     private void initCountDown() {
         Observable.interval(1, TimeUnit.SECONDS)//1秒一次
-                .take(3)//计时次数，一共三次
+                .take(4)//计时次数，一共三次
                 .map(new Function<Long, Long>() {
                     @Override
                     public Long apply(Long aLong) throws Exception {
@@ -109,9 +109,13 @@ public class SplashActivity extends BaseActivity {
                     @Override
                     public void onNext(Long value) {
                         String s = String.valueOf(value);
-                        if (tvCountDown!=null)
-                            llSkip.setVisibility(View.VISIBLE);
-                            tvCountDown.setText(StringUtils.isEmpty(s)?"":s);
+                        if (tvCountDown != null) {
+                            if (llSkip != null && (llSkip.getVisibility() == View.INVISIBLE))
+                                llSkip.setVisibility(View.VISIBLE);
+                            if (!"0".equals(s)) {
+                                tvCountDown.setText(StringUtils.isEmpty(s) ? "" : s);
+                            }
+                        }
 
                     }
 
@@ -122,10 +126,10 @@ public class SplashActivity extends BaseActivity {
 
                     @Override
                     public void onComplete() {
-                     if (!mIsCancle){
-                         startActivity(new Intent(SplashActivity.this,MainActivity.class));
-                         finish();
-                     }
+                        if (!mIsCancle) {
+                            startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                            finish();
+                        }
                     }
                 });
     }
