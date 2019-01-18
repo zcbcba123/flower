@@ -1,15 +1,15 @@
-package com.love.flower.base;
+package com.love.flower;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 
-import com.love.flower.MyApplication;
-
 import butterknife.ButterKnife;
+import me.yokeyword.fragmentation.SupportActivity;
 
-public abstract class BaseActivity extends Activity {
-    private Context mContext;
+public abstract class BaseCompatActivity extends SupportActivity {
+    protected Context mContext;
+    protected MyApplication mApplcation;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,4 +30,5 @@ public abstract class BaseActivity extends Activity {
     protected void initData() {
         mContext = MyApplication.getContext();
     }
+
 }

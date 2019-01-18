@@ -9,12 +9,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.love.flower.BaseCompatActivity;
 import com.love.flower.MainActivity;
 import com.love.flower.R;
 import com.love.flower.RxHelper;
 import com.love.flower.StringUtils;
 import com.love.flower.ToastUtils;
-import com.love.flower.base.BaseActivity;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 
 import java.util.concurrent.TimeUnit;
@@ -27,7 +27,7 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 
-public class SplashActivity extends BaseActivity {
+public class SplashActivity extends BaseCompatActivity {
     @BindView(R.id.ll_skip)
     LinearLayout llSkip;
     @BindView(R.id.tv_count_down)
@@ -46,11 +46,14 @@ public class SplashActivity extends BaseActivity {
     }
 
     @Override
-    public void onBackPressed() {
-        super.onBackPressed();
+    public void onBackPressedSupport() {
+//        super.onBackPressedSupport();
         mIsCancle = true;
+//        setIsTransAnim(false);
         finish();
     }
+
+
 
     @OnClick(R.id.ll_skip)
     public void onClick(View v) {

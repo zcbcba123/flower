@@ -46,4 +46,6 @@ dependencies {
     compile "com.tbruyelle.rxpermissions2:rxpermissions:$rootProject.rxPerssionsVersion"
 
     compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+//    //fragmentation
+    compile "me.yokeyword:fragmentation:$rootProject.fragmentationVersion"
 }
