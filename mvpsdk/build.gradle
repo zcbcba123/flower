@@ -34,18 +34,18 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     //Butterknife
-    compile "com.jakewharton:butterknife:$rootProject.butterknifeVersion"
+    api "com.jakewharton:butterknife:$rootProject.butterknifeVersion"
     annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.butterknifeVersion"
 
     // RxJava
-    compile "io.reactivex.rxjava2:rxjava:$rootProject.rxjavaVersion"
-    compile "io.reactivex.rxjava2:rxandroid:$rootProject.rxandroidVersion"
-    compile "com.jakewharton.rxbinding2:rxbinding:$rootProject.rxbindingVersion"
+    api "io.reactivex.rxjava2:rxjava:$rootProject.rxjavaVersion"
+    api "io.reactivex.rxjava2:rxandroid:$rootProject.rxandroidVersion"
+    api "com.jakewharton.rxbinding2:rxbinding:$rootProject.rxbindingVersion"
 
     //permissions
-    compile "com.tbruyelle.rxpermissions2:rxpermissions:$rootProject.rxPerssionsVersion"
+    api "com.tbruyelle.rxpermissions2:rxpermissions:$rootProject.rxPerssionsVersion"
 
-    compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+    api "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
 //    //fragmentation
-    compile "me.yokeyword:fragmentation:$rootProject.fragmentationVersion"
+    api "me.yokeyword:fragmentation:$rootProject.fragmentationVersion"
 }

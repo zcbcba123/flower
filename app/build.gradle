@@ -29,8 +29,8 @@ dependencies {
     implementation project(':mvpsdk')
     debugImplementation project(':mvpsdk')
     releaseImplementation project(':mvpsdk')
-//Butterknife
-    compile "com.jakewharton:butterknife:$rootProject.butterknifeVersion"
+////Butterknife
+//    implementation "com.jakewharton:butterknife:$rootProject.butterknifeVersion"
     annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.butterknifeVersion"
-    compile 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
 }
