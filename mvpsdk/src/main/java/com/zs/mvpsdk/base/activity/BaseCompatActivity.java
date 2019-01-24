@@ -1,4 +1,4 @@
-package com.love.flower;
+package com.zs.mvpsdk.base.activity;
 
 import android.app.Application;
 import android.content.Context;
@@ -7,6 +7,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatDelegate;
 import android.view.MotionEvent;
 import android.view.View;
+
+import com.zs.mvpsdk.AppManager;
+import com.zs.mvpsdk.global.MyApplication;
+import com.zs.mvpsdk.utils.AppUtils;
 
 import butterknife.ButterKnife;
 import me.yokeyword.fragmentation.SupportActivity;

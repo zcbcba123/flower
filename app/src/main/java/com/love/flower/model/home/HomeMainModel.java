@@ -2,7 +2,7 @@ package com.love.flower.model.home;
 
 import android.support.annotation.NonNull;
 
-import com.love.flower.BaseModel;
+import com.zs.mvpsdk.base.BaseModel;
 import com.love.flower.contract.home.HomeMainContract;
 
 public class HomeMainModel extends BaseModel implements HomeMainContract.IHomeMainModel {

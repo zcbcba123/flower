@@ -1,7 +1,9 @@
-package com.love.flower;
+package com.zs.mvpsdk.utils;
 
 import android.content.Context;
 import android.widget.Toast;
+
+import com.zs.mvpsdk.utils.AppUtils;
 
 public class ToastUtils {
     private static Toast mToast = null;

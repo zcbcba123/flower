@@ -1,4 +1,4 @@
-package com.love.flower;
+package com.zs.mvpsdk.base;
 
 public interface IBaseModel {
 }

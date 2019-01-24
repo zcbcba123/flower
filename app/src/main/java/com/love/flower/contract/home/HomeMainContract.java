@@ -1,8 +1,8 @@
 package com.love.flower.contract.home;
 
-import com.love.flower.BasePresenter;
-import com.love.flower.IBaseFragment;
-import com.love.flower.IBaseModel;
+import com.zs.mvpsdk.base.BasePresenter;
+import com.zs.mvpsdk.base.IBaseFragment;
+import com.zs.mvpsdk.base.IBaseModel;
 
 public interface HomeMainContract {
     //主页接口

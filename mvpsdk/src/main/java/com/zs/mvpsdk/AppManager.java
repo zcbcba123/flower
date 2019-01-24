@@ -1,4 +1,4 @@
-package com.love.flower;
+package com.zs.mvpsdk;
 
 import android.app.Activity;
 import android.app.ActivityManager;

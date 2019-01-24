@@ -1,8 +1,10 @@
-package com.love.flower;
+package com.zs.mvpsdk.utils;
 
 import android.content.res.ColorStateList;
 import android.graphics.drawable.Drawable;
 import android.view.View;
+
+import com.zs.mvpsdk.utils.AppUtils;
 
 /**
  * Created by Horrarndoo on 2017/9/1.

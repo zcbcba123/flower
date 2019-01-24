@@ -1,4 +1,4 @@
-package com.love.flower;
+package com.zs.mvpsdk.base.fragment;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,6 +9,9 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.zs.mvpsdk.global.MyApplication;
+import com.zs.mvpsdk.utils.AppUtils;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;

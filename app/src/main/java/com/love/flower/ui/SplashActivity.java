@@ -3,18 +3,16 @@ package com.love.flower.ui;
 import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
-import android.app.Activity;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.love.flower.BaseCompatActivity;
+import com.zs.mvpsdk.base.activity.BaseCompatActivity;
 import com.love.flower.MainActivity;
 import com.love.flower.R;
-import com.love.flower.RxHelper;
-import com.love.flower.StringUtils;
-import com.love.flower.ToastUtils;
+import com.zs.mvpsdk.rxbus.RxHelper;
+import com.zs.mvpsdk.utils.StringUtils;
+import com.zs.mvpsdk.utils.ToastUtils;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 
 import java.util.concurrent.TimeUnit;

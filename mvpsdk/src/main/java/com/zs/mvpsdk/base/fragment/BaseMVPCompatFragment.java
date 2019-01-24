@@ -1,9 +1,11 @@
-package com.love.flower;
+package com.zs.mvpsdk.base.fragment;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.view.View;
+
+import com.zs.mvpsdk.base.BasePresenter;
+import com.zs.mvpsdk.base.IBaseFragment;
 
 import me.yokeyword.fragmentation.SupportFragment;
 
@@ -14,7 +16,7 @@ import me.yokeyword.fragmentation.SupportFragment;
  * <p>
  * 实现IBaseView方法、绑定butterknife
  */
-public abstract class BaseMVPCompatFragment <P extends BasePresenter>extends BaseCompatFragment implements IBaseFragment{
+public abstract class BaseMVPCompatFragment <P extends BasePresenter>extends BaseCompatFragment implements IBaseFragment {
     public P mPresenter;
 
     /**

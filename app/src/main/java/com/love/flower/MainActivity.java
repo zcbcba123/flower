@@ -1,6 +1,5 @@
 package com.love.flower;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -8,11 +7,13 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.view.MenuItem;
-import android.view.View;
 
 import com.love.flower.ui.fragment.gankio.GankIoRootFragment;
 import com.love.flower.ui.fragment.home.HomeRootFragment;
 import com.love.flower.ui.fragment.home.child.HomeFragment;
+import com.zs.mvpsdk.base.activity.BaseCompatActivity;
+import com.zs.mvpsdk.utils.NavigationUtils;
+import com.zs.mvpsdk.utils.ToastUtils;
 
 import butterknife.BindView;
 import me.yokeyword.fragmentation.SupportFragment;

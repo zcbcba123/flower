@@ -1,12 +1,14 @@
-package com.love.flower;
+package com.zs.mvpsdk.base;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 
+import com.zs.mvpsdk.base.IBaseView;
+
 import me.yokeyword.fragmentation.SupportFragment;
 
-public interface IBaseFragment extends IBaseView{
+public interface IBaseFragment extends IBaseView {
     /**
      * 出栈到目标fragment
      *

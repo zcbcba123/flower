@@ -1,4 +1,4 @@
-package com.love.flower;
+package com.zs.mvpsdk.rxbus;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableSource;

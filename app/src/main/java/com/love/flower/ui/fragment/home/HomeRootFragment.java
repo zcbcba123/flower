@@ -3,7 +3,7 @@ package com.love.flower.ui.fragment.home;
 import android.os.Bundle;
 import android.view.View;
 
-import com.love.flower.BaseCompatFragment;
+import com.zs.mvpsdk.base.fragment.BaseCompatFragment;
 import com.love.flower.R;
 import com.love.flower.ui.fragment.home.child.HomeFragment;
 

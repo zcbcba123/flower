@@ -12,11 +12,10 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-import com.love.flower.BaseMVPCompatFragment;
-import com.love.flower.BasePresenter;
+import com.zs.mvpsdk.base.fragment.BaseMVPCompatFragment;
+import com.zs.mvpsdk.base.BasePresenter;
 import com.love.flower.R;
-import com.love.flower.ToastUtils;
-import com.love.flower.constant.TabFragmentIndex;
+import com.zs.mvpsdk.utils.ToastUtils;
 import com.love.flower.contract.home.HomeMainContract;
 import com.love.flower.presenter.HomeMainPresenter;
 import com.orhanobut.logger.Logger;
