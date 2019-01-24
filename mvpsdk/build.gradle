@@ -48,4 +48,10 @@ dependencies {
     api "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
 //    //fragmentation
     api "me.yokeyword:fragmentation:$rootProject.fragmentationVersion"
+
+    //support
+    api "com.android.support:design:$rootProject.supportLibraryVersion"
+
+    //Logger
+    api "com.orhanobut:logger:$rootProject.loggerVersion"
 }
