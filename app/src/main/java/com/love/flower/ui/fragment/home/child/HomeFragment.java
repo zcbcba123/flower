@@ -12,6 +12,10 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.love.flower.constant.TabFragmentIndex;
+import com.love.flower.presenter.ZhihuPresenter;
+import com.love.flower.ui.fragment.home.child.tabs.ZhihuFragment;
+import com.zs.mvpsdk.adapter.FragmentAdapter;
 import com.zs.mvpsdk.base.fragment.BaseMVPCompatFragment;
 import com.zs.mvpsdk.base.BasePresenter;
 import com.love.flower.R;
@@ -39,8 +43,9 @@ public class HomeFragment extends BaseMVPCompatFragment<HomeMainContract.HomeMai
     @BindView(R.id.fab_download)
     FloatingActionButton fabDownload;
     protected OnOpenDrawerLayoutListener onOpenDrawerLayoutListener;
-    private List<Fragment>fragments;
-    public static HomeFragment newInstance(){
+    private List<Fragment> fragments;
+
+    public static HomeFragment newInstance() {
         Bundle args = new Bundle();
         HomeFragment fragment = new HomeFragment();
         fragment.setArguments(args);
@@ -50,7 +55,7 @@ public class HomeFragment extends BaseMVPCompatFragment<HomeMainContract.HomeMai
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof OnOpenDrawerLayoutListener){
+        if (context instanceof OnOpenDrawerLayoutListener) {
             onOpenDrawerLayoutListener = (OnOpenDrawerLayoutListener) context;
         }
         fragments = new ArrayList<>();
@@ -75,7 +80,7 @@ public class HomeFragment extends BaseMVPCompatFragment<HomeMainContract.HomeMai
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (onOpenDrawerLayoutListener!=null){
+                if (onOpenDrawerLayoutListener != null) {
                     onOpenDrawerLayoutListener.onOpen();
                 }
             }
@@ -84,9 +89,9 @@ public class HomeFragment extends BaseMVPCompatFragment<HomeMainContract.HomeMai
         appBar.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-                if (verticalOffset==0){
+                if (verticalOffset == 0) {
                     fabDownload.show();
-                }else {
+                } else {
                     fabDownload.hide();
                 }
             }
@@ -116,12 +121,30 @@ public class HomeFragment extends BaseMVPCompatFragment<HomeMainContract.HomeMai
     @Override
     public void showTabList(String[] tabs) {
         Logger.w(Arrays.toString(tabs));
-        for (int i=0;i<tabs.length;i++){
+        for (int i = 0; i < tabs.length; i++) {
             tlTabs.addTab(tlTabs.newTab().setText(tabs[i]));
-//            switch (i){
+            switch (i) {
+                case TabFragmentIndex.TAB_ZHIHU_INDEX:
+                    fragments.add(ZhihuFragment.newInstance());
+                    break;
 //                case TabFragmentIndex.TAB_ZHIHU_INDEX:
-//                    fragments.add()
-//            }
+//                    fragments.add();
+//                    break;
+//                case TabFragmentIndex.TAB_ZHIHU_INDEX:
+//                    fragments.add();
+//                    break;
+                default:
+                    fragments.add(ZhihuFragment.newInstance());
+                    break;
+            }
+        }
+        vpFragment.setAdapter(new FragmentAdapter(getChildFragmentManager(),fragments));
+        vpFragment.setCurrentItem(TabFragmentIndex.TAB_ZHIHU_INDEX);//要设置到viewpager.setAdapter后才起作用
+        tlTabs.setupWithViewPager(vpFragment);
+        tlTabs.setVerticalScrollbarPosition(TabFragmentIndex.TAB_ZHIHU_INDEX);
+        //tlTabs.setupWithViewPager方法内部会remove所有的tabs，这里重新设置一遍tabs的text，否则tabs的text不显示
+        for (int i=0;i<tabs.length;i++){
+            tlTabs.getTabAt(i).setText(tabs[i]);
         }
     }
 
