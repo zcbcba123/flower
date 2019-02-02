@@ -14,6 +14,7 @@ import android.view.View;
 
 import com.love.flower.constant.TabFragmentIndex;
 import com.love.flower.presenter.ZhihuPresenter;
+import com.love.flower.ui.fragment.home.child.tabs.WangyiFragment;
 import com.love.flower.ui.fragment.home.child.tabs.ZhihuFragment;
 import com.zs.mvpsdk.adapter.FragmentAdapter;
 import com.zs.mvpsdk.base.fragment.BaseMVPCompatFragment;
@@ -127,9 +128,9 @@ public class HomeFragment extends BaseMVPCompatFragment<HomeMainContract.HomeMai
                 case TabFragmentIndex.TAB_ZHIHU_INDEX:
                     fragments.add(ZhihuFragment.newInstance());
                     break;
-//                case TabFragmentIndex.TAB_ZHIHU_INDEX:
-//                    fragments.add();
-//                    break;
+                case TabFragmentIndex.TAB_WANGYI_INDEX:
+                    fragments.add(WangyiFragment.newInstance());
+                    break;
 //                case TabFragmentIndex.TAB_ZHIHU_INDEX:
 //                    fragments.add();
 //                    break;
